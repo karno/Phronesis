@@ -1,5 +1,5 @@
-﻿using Windows.UI.Xaml.Controls;
-using Phronesis.Messaging.UI;
+﻿using Phronesis.Messaging.UI;
+using Windows.UI.Xaml.Controls;
 
 namespace Phronesis.Actions.UI
 {

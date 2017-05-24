@@ -17,7 +17,7 @@ However, they are *incredibly fat* to solve various (sometimes trivial) problem 
 
 Do you think the Dependency-Injection feature is really necessary? 
 
-Are you sure you want to sent requests to *SomethingLovelyCoolExcellentBlackboxMachine*?
+Are you sure you want to use *SomethingLovelyCoolExcellentBlackboxMachine*?
 
 ## Phronesis means Practical Wisdom.
 

@@ -1,19 +1,19 @@
 ﻿using System;
 using Microsoft.Xaml.Interactivity;
 using Phronesis.Messaging.UI;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
 namespace Phronesis.Actions.UI
 {
-    public class GoToStateAction : MessageActionBase<GoToStateMessage>
+    public class GoToStateAction : MessageActionBase<GoToStateMessage, Control>
     {
-        protected override bool Execute(DependencyObject associatedObject, GoToStateMessage message)
+        protected override bool Execute(Control associatedObject, GoToStateMessage message)
         {
             try
             {
                 message.CompletionSource.TrySetResult(
-                    VisualStateUtilities.GoToState((Control)associatedObject, message.StateName, message.UseTransitions));
+                    VisualStateUtilities.GoToState(associatedObject,
+                    message.StateName, message.UseTransitions));
             }
             catch (Exception ex)
             {

@@ -5,8 +5,9 @@ namespace Phronesis.Util
 {
     public static class Disposable
     {
-        public static IDisposable Create(Action disposeAction)
+        public static IDisposable Create([NotNull] Action disposeAction)
         {
+            if (disposeAction == null) throw new ArgumentNullException(nameof(disposeAction));
             return new AnonymousDisposable(disposeAction);
         }
 

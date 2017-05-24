@@ -50,7 +50,7 @@ namespace Phronesis._Internals
 
         private IEnumerable<EventHandler<TEventArgs>> GetLiveHandlers()
         {
-            var keys = _handlerDictionary.Keys;
+            var keys = _handlerDictionary.Keys.ToArray();
             foreach (var key in keys)
             {
                 var value = _handlerDictionary[key];

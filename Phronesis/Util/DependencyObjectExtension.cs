@@ -1,13 +1,17 @@
-﻿using Windows.UI.Xaml;
+﻿using System;
+using JetBrains.Annotations;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
 namespace Phronesis.Util
 {
     public static class DependencyObjectExtension
     {
-        public static T FindVisualChild<T>(this DependencyObject obj) where T : DependencyObject
+        public static T FindVisualChild<T>([NotNull] this DependencyObject obj) where T : DependencyObject
         {
-            for (var i = 0; i < VisualTreeHelper.GetChildrenCount(obj); i++)
+            if (obj == null) throw new ArgumentNullException(nameof(obj));
+            var cnum = VisualTreeHelper.GetChildrenCount(obj);
+            for (var i = 0; i < cnum; i++)
             {
                 var child = VisualTreeHelper.GetChild(obj, i);
                 var cTyped = child as T;

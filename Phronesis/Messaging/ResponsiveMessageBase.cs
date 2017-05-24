@@ -9,7 +9,6 @@ namespace Phronesis.Messaging
         public ResponsiveMessageBase(string key = null)
             : base(key)
         {
-
         }
     }
 }
