@@ -13,7 +13,7 @@ namespace Phronesis.Messaging
         [CanBeNull]
         public string Key { get; set; }
 
-        public MessageBase([CanBeNull] string key = null)
+        protected MessageBase([CanBeNull] string key = null)
         {
             Key = key;
         }

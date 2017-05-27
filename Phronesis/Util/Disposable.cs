@@ -18,8 +18,7 @@ namespace Phronesis.Util
 
             public AnonymousDisposable([NotNull] Action disposer)
             {
-                if (disposer == null) throw new ArgumentNullException(nameof(disposer));
-                _disposer = disposer;
+                _disposer = disposer ?? throw new ArgumentNullException(nameof(disposer));
             }
 
             public void Dispose()

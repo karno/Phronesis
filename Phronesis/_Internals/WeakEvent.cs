@@ -54,8 +54,7 @@ namespace Phronesis._Internals
             foreach (var key in keys)
             {
                 var value = _handlerDictionary[key];
-                EventHandler<TEventArgs> handler;
-                if (value.TryGetTarget(out handler))
+                if (value.TryGetTarget(out var handler))
                 {
                     yield return handler;
                 }
@@ -84,8 +83,7 @@ namespace Phronesis._Internals
 
             internal WeakEventUnsubscriber([NotNull] WeakEvent<TEventArgs> parent, long id)
             {
-                if (parent == null) throw new ArgumentNullException(nameof(parent));
-                _parent = parent;
+                _parent = parent ?? throw new ArgumentNullException(nameof(parent));
                 _id = id;
             }
 

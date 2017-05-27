@@ -6,7 +6,7 @@ namespace Phronesis.Messaging
     {
         public TaskCompletionSource<T> CompletionSource { get; } = new TaskCompletionSource<T>();
 
-        public ResponsiveMessageBase(string key = null)
+        protected ResponsiveMessageBase(string key = null)
             : base(key)
         {
         }

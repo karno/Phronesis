@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Phronesis")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Thin and powerful MVVM framework for UWP")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Phronesis")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright ©  2016 Karno")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

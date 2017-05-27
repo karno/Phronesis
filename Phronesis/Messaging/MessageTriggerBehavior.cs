@@ -1,10 +1,10 @@
 ﻿using System;
-using Microsoft.Xaml.Interactivity;
-using Phronesis.Messaging.Core;
 using Windows.ApplicationModel;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Markup;
+using Microsoft.Xaml.Interactivity;
+using Phronesis.Messaging.Core;
 
 namespace Phronesis.Messaging
 {
@@ -33,7 +33,7 @@ namespace Phronesis.Messaging
             ((MessageTriggerBehavior)sender).MessengerChanged(messenger);
         }
 
-        #endregion
+        #endregion Dependency Properties and Change Handlers
 
         // this variable is NOT synchronized with Messenger property.
         private Messenger _boundMessenger;
@@ -56,14 +56,14 @@ namespace Phronesis.Messaging
 
         public string MessageKey
         {
-            get { return (string)GetValue(MessageKeyProperty); }
-            set { SetValue(MessageKeyProperty, value); }
+            get => (string)GetValue(MessageKeyProperty);
+            set => SetValue(MessageKeyProperty, value);
         }
 
         public Messenger Messenger
         {
-            get { return (Messenger)GetValue(MessengerProperty); }
-            set { SetValue(MessengerProperty, value); }
+            get => (Messenger)GetValue(MessengerProperty);
+            set => SetValue(MessengerProperty, value);
         }
 
         public DependencyObject AssociatedObject { get; private set; }
